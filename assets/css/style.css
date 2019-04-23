@@ -3,3 +3,20 @@ body{
     position: relative;
     
   }
+
+  #form-box{
+      box-align: center;
+  }
+
+  
+  #face{
+      color: blueviolet;
+  }
+
+  #new-anime-button {
+      color: blueviolet
+  }
+
+  #favorite-anime {
+      color: blueviolet;
+  }

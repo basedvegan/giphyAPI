@@ -16,13 +16,18 @@
     <div id="button-box"></div>
 
     <!-- bootstrap form and submit button for adding new items to the original array of buttons -->
-    <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="favorite anime" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">add!</button>
+    <div id="form-box">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="user-fav-title" placeholder="add your favorite anime!"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="new-anime-button">♡♡♡</button>
+                        <small id="face" class="form-text">
+                            thank you!
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,6 +35,9 @@
 
     <!-- create box for appending gifs and ratings -->
     <div id="gif-rating-box"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
