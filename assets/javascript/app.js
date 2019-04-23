@@ -76,7 +76,31 @@ for (var i = 0; i < topics.length; i++) {
 // xhr.done(function (data) { console.log("success got data", data); });
 
 // When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
+ // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+ // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+ // Then, set the image's data-state to animate
+ // Else set src to the data-still value
+    //$(document).on("click", $(animalImage), function() {
+    //  The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    //add attributes like we added the src of the retrieved gifs to still
+    //   var state = $(animeGIF).attr("data-state");
+    //   console.log();
+      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      // Then, set the image's data-state to animate
+      // Else set src to the data-still value
+    //   if (state === "still") {
+    //     $(this).attr("src", $(this).attr("data-animate"));
+    //     $(this).attr("data-state", "animate");
+    //   } else {
+    //     $(this).attr("src", $(this).attr("data-still"));
+    //     $(this).attr("data-state", "still");
+    //   }
+    // });
 // This data is provided by the GIPHY API.
 // Only once you get images displaying with button presses should you move on to the next step.
+//in order to get info from the #user-fav-title, we must create a new on click function for the submit button to grab the 
+//value of the text input and make a button with it, adding it to the array. remember to clear the buttons before so we dont double print them.
+//newly created button should function the same as the rest in the array
+
 
 
