@@ -1,17 +1,17 @@
 //create an array of strings, each one related to a topic that interests you. Save it to a variable called topics. testing
-var topics = ["Spirited Away", "Hunter x Hunter", "Puella Magi Madoka Magica", "Full Metal Alchemist", "Cowboy Bebop", "Samurai Champloo", "Naruto", "Guren Lagaan"];
+var topics = ["Spirited Away", "Hunter x Hunter", "Puella Magi Madoka Magica", "Full Metal Alchemist", "Cowboy Bebop", "Samurai Champloo", "Naruto", "Gurren Lagaan"];
 
 
 // Your app should take the topics in this array and create buttons in your HTML.
 // Try using a loop that appends a button for each string in the array.
-// function createButtons() {
+
 for (var i = 0; i < topics.length; i++) {
     var button = $('<button>' + topics[i] + '</button>');
     // button.addClass("anime-title");
     button.attr("data-anime", topics[i]);
     //append buttons to html div
     $("#button-box").append(button);
-
+    // When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
     $('button').on('click', function () {
         // check to see if buttons are actually being clicked
         //console.log("clicked");
@@ -32,7 +32,6 @@ for (var i = 0; i < topics.length; i++) {
         })
             //function for what to do with response (data array of 10 gifs) from ajax call
             .then(function (response) {
-                //console.log(queryURL);
                 //check for retrieved data 
                 //console.log(response);
                 //store data in results variable
@@ -41,6 +40,7 @@ for (var i = 0; i < topics.length; i++) {
 
                 //loop though each result item
                 for (var i = 0; i < results.length; i++) {
+
                     //create and store div tag
                     var animeDiv = $("<div>");
 
@@ -53,8 +53,9 @@ for (var i = 0; i < topics.length; i++) {
                     //setting the src attr of the img to the still img property to get back the still images
                     animeGIF.attr("src", results[i].images.fixed_height_still.url);
 
-                    //appending paragraph and image tag to the animeDiv
+                    // Under every gif, display its rating (PG, G, so on).
 
+                    //appending paragraph and image tag to the animeDiv
                     animeDiv.append(animeGIF);
                     animeDiv.append(p);
 
@@ -68,21 +69,13 @@ for (var i = 0; i < topics.length; i++) {
 
     });
 }
-// }
 
-// createButtons();
 
 // checking out my api key
 // var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=nEJ4U2h4TUNGRM7XscV2yEFq62tOorZ4&limit=5");
 // xhr.done(function (data) { console.log("success got data", data); });
 
-// When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
-
 // When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
-
-// Under every gif, display its rating (PG, G, so on).
-
-
 // This data is provided by the GIPHY API.
 // Only once you get images displaying with button presses should you move on to the next step.
 
