@@ -14,9 +14,13 @@ function createButtons() {
 
         // check to see if buttons are actually being clicked
         $('button').on('click', function (e) {
-            var anime = $(this).attr("data-anime")
+            var anime = $(this).attr("data-anime");
             //check if data attr was passed
-            console.log(anime);
+            //console.log(anime);
+            //add query url and check if linked to "anime"
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+            anime + "&api_key=nEJ4U2h4TUNGRM7XscV2yEFq62tOorZ4&limit=10";
+            console.log(queryURL);
         })
     }
 }
