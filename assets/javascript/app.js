@@ -1,4 +1,4 @@
-//create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
+//create an array of strings, each one related to a topic that interests you. Save it to a variable called topics. testing
 var topics = ["Spirited Away", "Hunter x Hunter", "Puella Magi Madoka Magica", "Full Metal Alchemist", "Cowboy Bebop", "Samurai Champloo", "Food Wars", "Guren Lagaan"];
 
 
