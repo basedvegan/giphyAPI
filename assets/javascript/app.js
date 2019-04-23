@@ -19,11 +19,24 @@ function createButtons() {
             //console.log(anime);
             //add query url and check if linked to "anime"
             var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            anime + "&api_key=nEJ4U2h4TUNGRM7XscV2yEFq62tOorZ4&limit=10";
-            console.log(queryURL);
+            anime + "&api_key=dc6zaTOxFJmzC&limit=10";
+           // console.log(queryURL);
+
+           //ajax call
+           $.ajax({
+               url: queryURL,
+               method: "GET"
+           })
+           //function for what to do with response (data array of 10 gifs)
+           .then(function(response) {
+               //check for retrieved data 
+               console.log(response);
+           })
+
         })
     }
 }
+
 createButtons();
 
 // checking out my api key
